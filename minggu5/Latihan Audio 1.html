@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Latihan Semantic Audio</title>
+</head>
+<body>
+    <h1>Contoh Audio Di Web</h1>
+    <p>
+        <button onclick="durationAudio() " type="button">Duration</button>
+        <button onclick="playAudio() " type="button">Play Audio</button>
+        <button onclick="pauseAudio() " type="button">Pause Audio</button>
+        <button onclick="enableCon() " type="button">Enable Controls</button>
+        <button onclick="disableCon() " type="button">Disable Controls</button>
+    </p>
+        <audio id="myAudio" controls>
+            <source src="media/y2mate.com - storywa 30 detik dj el perdon mengkane x Hadroh viral tiktok.mp3" type="audio/mpeg">
+       </audio>
+    <script>
+        var audio = document.getElementById("myAudio");
+        function durationAudio() {
+            alert(audiio.duration) ;
+        }
+        function playAudio() {
+            audio.play() ;
+            audio.loop = true;
+        }
+        function pauseAudio() {
+            audio.pause() ;
+        }
+        function enableCon() {
+            audio.controls = true;
+            audio.load() ;
+        }
+        function disableCon() {
+            audio.controls = false;
+            audio.load() ;
+        }
+    </script>
+</body>
+</html>
