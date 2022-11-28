@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan Javascript 2</title>
+    <script>
+        function hitung(){
+            var myForm = document.FormHitung;
+            var bil1 = eval(myForm.bil1.value);
+            var bil2 = eval(myForm.bil2.value);
+            var pil = myForm.opr.value;
+            if (pil =="+"){
+                var z = bil1 + bil2;
+            } else if (pil =="-"){
+                var z = bil1 - bil2;
+            } else if (pil =="*"){
+                var z = bil1 * bil2;
+            } else if (pil =="/"){
+                var z = bil1 / bil2;
+            }
+            myForm.hasil.value = z;
+        }
+    </script>
+</head>
+<body>
+    <h1>Operator Aritmatika</h1>
+    <form name="FormHitung" action="#">
+		bil 1 <input name="bil1" type="number"><br>
+		opr
+		<select name="opr">
+			<option value="+">+</option>
+			<option value="-">-</option>
+			<option value="*">*</option>
+			<option value="/">/</option>
+		</select><br>
+		bil 2 <input name="bil2" type="number"><br>
+		<input type="button" value="=" onclick="hitung()">
+		<input type="number" name="hasil" disabled>
+    </form>
+</body>
+</html>
